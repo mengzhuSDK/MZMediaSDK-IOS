@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.authors      = "Mengzhu"
   s.name         = "MZMediaSDK"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "MZMediaSDK iOS SDK"
   s.description  = "Provides the user to push the stream and the playback function"
   s.homepage     = "http://www.zmengzhu.com"
@@ -11,4 +11,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true  
   s.ios.deployment_target = '8.0'
   s.vendored_frameworks = 'MZMediaSDK/MZMediaSDK.framework'
+  s.dependency 'MZCoreSDKLibrary'
   end
