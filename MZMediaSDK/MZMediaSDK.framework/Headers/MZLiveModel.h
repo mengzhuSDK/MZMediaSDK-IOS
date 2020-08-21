@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "MZMoviePlayerModel.h"
-#import <MZCoreSDKLibrary/MZCoreSDKLibrary.h>
-
-@class MZLiveModel;
 
 @interface MZLiveModel : NSObject
 
@@ -37,12 +34,30 @@
 @property (nonatomic,strong) NSString * channelCover;
 /*!
  频道状态
+ typedef NS_ENUM(NSUInteger, ChannelStatus) {
+     ChannelStatusLive = 1,     //直播
+     ChannelStatusEnd,      //回放
+     ChannelStatusRelay,    //转播
+     ChannelStatusPlayEnd   //播放完成
+ };
  */
-@property (nonatomic,assign) ChannelStatus  channelStatus;
+@property (nonatomic,assign) NSInteger  channelStatus;
 /*!
  当前用户的角色
+ typedef NS_ENUM(NSUInteger, UserRoleType) {
+     UserRoleTypeUser,      //普通用户
+     UserRoleTypeHost,      //主播
+     UserRoleTypeSub_account,//子账号
+     
+     UserRoleTypeGuest,     //嘉宾
+     UserRoleTypeAssistant, //助理
+     
+     UserRoleTypeSystem,     //系统
+     UserRoleTypeRobot,    //机器人
+     UserRoleTypeAnonymous//游客
+ };
  */
-@property (nonatomic,assign) UserRoleType roleType;
+@property (nonatomic,assign) NSInteger roleType;
 /*!
  频道在线用户数
  */

@@ -76,4 +76,9 @@ FOUNDATION_EXPORT const unsigned char MZMediaSDKVersionString[];
 #import "MZDocumentListView.h"
 #import "MZDocumentListCell.h"
 
-
+#pragma mark - 问答
+#import "MZDiscussView.h"
+#import "MZDiscussModel.h"
+#import "MZDiscussSectionView.h"
+#import "MZDiscussCell.h"
+#import "MZDiscussInputView.h"

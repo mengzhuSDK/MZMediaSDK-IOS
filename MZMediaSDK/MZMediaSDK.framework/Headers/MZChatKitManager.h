@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MZLiveModel.h"
 #import "MZLongPollDataModel.h"
 #import <MZCoreSDKLibrary/MZCoreSDKLibrary.h>
 
