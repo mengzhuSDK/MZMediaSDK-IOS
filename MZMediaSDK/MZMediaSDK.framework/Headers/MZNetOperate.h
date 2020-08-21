@@ -59,10 +59,6 @@
 
 #define MZAPP_DownLoadUrl   @"https://itunes.apple.com/us/app/meng-zhu/id1038341935?"
 
-//常量数据
-#define MZNET_CODE_OK       @"200"  //获取数据成功
-
-//#define MZNET_SECRETKEY     @"7LQ3W0AXfiHeE9euEsYSk9Gf8ifvW7zmyaBU749bxVUsGyeDrcMMdd8qwBCU3jFM"
 
 //首页每次加载条数
 #define MZHomeViewLimit     @"20"
@@ -70,14 +66,11 @@
 //直播观众/礼物列表加载数据
 #define MZLiveViewLimit     @"20"
 
-//没有网络提示文字
-#define MZ_NET_NONet        @"无可用网络"
-
 //获取网络失败文字提示
 #define MZ_NET_Failure      @"获取网络数据失败"
 
 //请求地址前后缀合成
-#define MZ_NET_Url(prefixUrl,suffixUrl) [NSString stringWithFormat:@"%@%@%@?",MZ_URL_Prefix,prefixUrl,suffixUrl]
+#define MZ_SDK_NET_Url(prefixUrl,suffixUrl) [NSString stringWithFormat:@"%@%@%@?",MZ_URL_Prefix,prefixUrl,suffixUrl]
 #define MZ_NET_Url_assemble(basePrefixUrl,suffixUrl) [NSString stringWithFormat:@"%@%@",basePrefixUrl,suffixUrl]
 
 //网址前缀字段
@@ -124,6 +117,12 @@
 
 #define MZNet_GetLoginToken             @"/user/initToken"//获取登录token
 
+#define MZNet_GiftList                  @"/gift/list"//获取直播间礼物列表
+#define MZNet_GiftPush                  @"/gift/push"//直播间推送礼物
+
+#define MZNet_DiscussList               @"/discuss/list"//问答列表
+#define MZNet_DiscussSubmitQuestion     @"/discuss/submitQuestion"//提交问答
+
 #endif
 static BOOL isDebugs;
 static NSString *mBusinessPrefix;
@@ -153,4 +152,8 @@ static NSString *mPrefix;
 +(NSString *)voteAllOptional;
 +(NSString *)voteToDo;
 +(NSString *)getLoginToken;
++(NSString *)giftList;
++(NSString *)giftPush;
++(NSString *)discussList;
++(NSString *)discussSubmitQuestion;
 @end

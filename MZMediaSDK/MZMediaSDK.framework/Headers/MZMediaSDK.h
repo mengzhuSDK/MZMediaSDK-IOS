@@ -22,17 +22,12 @@ FOUNDATION_EXPORT const unsigned char MZMediaSDKVersionString[];
 #pragma mark - MZNetOperate
 #import "MZNetOperate.h"
 
-#pragma mark - request
-#import "MZNetSeverUrlManager.h"
-
 #pragma mark - MZLiveActivity
 #import "MZActMsg.h"
 #import "MZLiveModel.h"
 #import "MZLongPollDataModel.h"
 
 #pragma mark - comment
-#import "MZActivityComment.h"
-#import "MZCommenComment.h"
 #import "MZEventTag.h"
 
 #pragma mark - chat
@@ -48,7 +43,6 @@ FOUNDATION_EXPORT const unsigned char MZMediaSDKVersionString[];
 
 #pragma mark - model
 #import "MZGoodsListModel.h"
-#import "MZNetSeverUrlModel.h"
 #import "MZLiveFinishModel.h"
 #import "MZBlackListModel.h"
 #import "MZHomeCenterModel.h"
@@ -81,3 +75,5 @@ FOUNDATION_EXPORT const unsigned char MZMediaSDKVersionString[];
 
 #import "MZDocumentListView.h"
 #import "MZDocumentListCell.h"
+
+
