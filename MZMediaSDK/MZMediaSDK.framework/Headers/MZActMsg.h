@@ -111,6 +111,8 @@
 @property (nonatomic,strong) NSString * rewardMoney;
 @property (nonatomic,strong) NSString * pay_method;
 
+//问答新回复未读个书
+@property (nonatomic,strong) NSString * discussNoReadReplyCount;
 
 //礼物ID
 @property (nonatomic,strong) NSString * giftID;

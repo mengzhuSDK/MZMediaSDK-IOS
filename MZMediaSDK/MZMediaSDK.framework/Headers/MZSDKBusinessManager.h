@@ -9,26 +9,84 @@
 #import <Foundation/Foundation.h>
 #import "MZMoviePlayerModel.h"
 #import "MZHostModel.h"
-#import "MZShareModel.h"
 #import "MZLiveFinishModel.h"
 
 @interface MZSDKBusinessManager : NSObject
-///获取主播信息
-+ (void)reqHostInfo:(NSString*)ticketId success:(void (^)(MZHostModel*  responseObject))success failure:(void (^)(NSError *error))failure;
-///视频详情
+/**
+ * 获取主播信息
+ *
+ * @param ticketId 直播活动ID
+ * @param success 成功回调
+ * @param failure 失败原因回调
+ */
+ + (void)reqHostInfo:(NSString*)ticketId success:(void (^)(MZHostModel*  responseObject))success failure:(void (^)(NSError *error))failure;
+
+/**
+ * 视频详情
+ *
+ * @param ticketId 直播活动ID
+ * @param success 成功回调
+ * @param failure 失败原因回调
+ */
 + (void)reqPlayInfo:(NSString*)ticketId success:(void (^)(MZMoviePlayerModel*  responseObject))success failure:(void (^)(NSError *error))failure;
 
-///回放历史数据
+/**
+ * 回放历史数据
+ *
+ * @param ticketId 直播活动ID
+ * @param offset 数据获取偏移
+ * @param limit 获取数据条数
+ * @param last_id 获取的最后一条数据
+ * @param success 成功回调
+ * @param failure 失败原因回调
+ */
 +(void)reqChatHistoryWith :(NSString *)ticketId  offset : (NSInteger)offset limit :(NSInteger)limit last_id:(NSString *)last_id success:(void(^)(NSMutableArray *responseObject))success failure:(void(^)(NSError * error))failure;
-///活动商品列表
+
+/**
+ * 活动商品列表
+ *
+ * @param ticketId 直播活动ID
+ * @param offset 数据获取偏移
+ * @param limit 获取数据条数
+ * @param success 成功回调
+ * @param failure 失败原因回调
+ */
 +(void)reqGoodsList:(NSString *)ticketId offset : (NSInteger)offset limit :(NSInteger)limit success:(void(^)(id responseObject))success failure:(void(^)(NSError * error))failure;
-///获取在线用户
+
+/**
+ * 获取在线用户
+ *
+ * @param ticketId 直播活动ID
+ * @param offset 数据获取偏移
+ * @param limit 获取数据条数
+ * @param success 成功回调
+ * @param failure 失败原因回调
+ */
 +(void)reqGetUserList:(NSString *)ticketId offset :(NSInteger)offset limit :(NSInteger)limit success:(void(^)(id responseObject))success failure:(void(^)(NSError * error))failure;
-///点赞
+
+/**
+ * 点赞
+ *
+ * @param ticketId 直播活动ID
+ * @param channel_id 频道ID
+ * @param praises 点赞次数
+ * @param chat_uid 点赞用户的uid
+ * @param success 成功回调
+ * @param failure 失败原因回调
+ */
 +(void)reqPostPraise:(NSString *)ticketId channel_id:(NSString *)channel_id praises:(NSString *)praises chat_uid:(NSString *)chat_uid success:(void(^)(id responseObject))success failure:(void(^)(NSError * error))failure;
-///设置是否debug
+
+/**
+ * 设置是否debug
+ *
+ * @param isDebug 是否debug
+ */
 +(void)setDebug:(BOOL)isDebug;
-///获取是否debug
+
+/**
+ * 获取是否debug
+ *
+ */
 +(BOOL)isDebug;
 
 #pragma mark - 直播
@@ -79,7 +137,8 @@
  * @param failure 失败原因回调
  */
 +(void)blockAllOrAlowChatWithChannelId:(NSString *)channelId ticketId:(NSString *)ticketId isChat:(BOOL)isChat success:(void(^)(id responseObject))success failure:(void (^)(NSError *))failure;
-+(void)blockAllOrAlowChatWithChannelId:(NSString *)channelId ticketId:(NSString *)ticketId type:(BOOL)type success:(void (^)(id))success failure:(void (^)(NSError *))failure;/// 兼容旧版本
+/// 兼容旧版本
++(void)blockAllOrAlowChatWithChannelId:(NSString *)channelId ticketId:(NSString *)ticketId type:(BOOL)type success:(void (^)(id))success failure:(void (^)(NSError *))failure;
 
 /**
  * 获取文档列表信息
@@ -167,7 +226,7 @@
 +(void)getGiftListWithTicketId:(NSString *)ticketId offset:(NSInteger)offset limit:(NSInteger)limit success:(void(^)(id responseObject))success failure:(void (^)(NSError *))failure;
 
 /**
- * 直播间礼物发送礼物
+ * 直播间礼物支付成功，通过消息服务器发送礼物购买成功的消息
  *
  * @param ticketId 直播活动ID
  * @param giftId 发送礼物ID

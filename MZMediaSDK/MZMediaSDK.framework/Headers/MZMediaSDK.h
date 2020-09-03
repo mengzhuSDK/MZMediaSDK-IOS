@@ -61,7 +61,6 @@ FOUNDATION_EXPORT const unsigned char MZMediaSDKVersionString[];
 #import "MZChannelManagerModel.h"
 #import "MZLiveUserModel.h"
 #import "MZWebinar_info.h"
-#import "MZShareModel.h"
 #import "MZPresentListModel.h"
 #import "MZAudienceListModel.h"
 
@@ -75,10 +74,3 @@ FOUNDATION_EXPORT const unsigned char MZMediaSDKVersionString[];
 
 #import "MZDocumentListView.h"
 #import "MZDocumentListCell.h"
-
-#pragma mark - 问答
-#import "MZDiscussView.h"
-#import "MZDiscussModel.h"
-#import "MZDiscussSectionView.h"
-#import "MZDiscussCell.h"
-#import "MZDiscussInputView.h"

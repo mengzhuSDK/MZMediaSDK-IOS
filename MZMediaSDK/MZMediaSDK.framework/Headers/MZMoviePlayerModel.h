@@ -43,7 +43,7 @@
 @interface MZSignInfo : NSObject
 @property (nonatomic,   copy) NSString *channel_id;//频道ID
 @property (nonatomic,   copy) NSString *ticket_id;//活动ID
-@property (nonatomic,   copy) NSString *title;//投票标题
+@property (nonatomic,   copy) NSString *title;//签到标题
 @property (nonatomic, assign) int sign_id;//签到的ID
 @property (nonatomic, assign) int status;//签到的状态，0-未开始，1-已开始， 2-已结束
 
