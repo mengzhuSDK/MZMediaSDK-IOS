@@ -41,6 +41,7 @@ FOUNDATION_EXPORT const unsigned char MZMediaSDKVersionString[];
 #import "MZHostModel.h"
 #import "MZPlayInfoModel.h"
 #import "MZOnlineUserListModel.h"
+#import "MZCurrentLiveInfo.h"
 
 #pragma mark - push_model
 #import "MZUser_info.h"

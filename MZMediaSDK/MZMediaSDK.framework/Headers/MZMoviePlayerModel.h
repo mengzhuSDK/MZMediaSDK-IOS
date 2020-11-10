@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+/** 活动msg类型 */
 @interface MZMoviePlayerMsg_conf : NSObject
 @property (nonatomic, strong) NSString *msg_srv;
 @property (nonatomic, strong) NSString *msg_listen_srv;
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) NSString *chat_uid;
 @end
 
+/** 活动chat模型 */
 @interface MZMoviePlayerChat_conf : NSObject
 @property (nonatomic, strong) NSString *pub_url;
 @property (nonatomic, strong) NSString *token;
@@ -26,7 +28,7 @@
 @property (nonatomic, strong) NSString *chat_uid;
 @end
 
-
+/** 活动地址 */
 @interface MZMoviePlayerVideoModel : NSObject
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, strong) NSString *http_url;
@@ -68,7 +70,7 @@
 
 @end
 
-
+/** 活动详细数据 */
 @interface MZMoviePlayerModel : NSObject
 @property (nonatomic, strong) NSString * channel_id;//频道ID
 @property (nonatomic, strong) NSString * cover;//活动封面

@@ -32,6 +32,9 @@
                  success:(void(^ _Nullable)(void))success
                  failure:(void(^ _Nullable)(NSError * _Nullable error))failure;
 
+/// 设置是否打印日志，默认关闭
++ (void)setLogEnable:(BOOL)logEnable;
+
 
 @end
 

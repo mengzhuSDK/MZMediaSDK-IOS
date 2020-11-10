@@ -13,6 +13,15 @@
 
 @interface MZSDKBusinessManager : NSObject
 /**
+ * 获取当前频道有没有正在直播的活动
+ *
+ * @param channel_id 活动所属的频道ID，此ID从服务器获取或者找对接人员索要
+ * @param success 成功回调
+ * @param failure 失败回调
+ */
++ (void)getLiveInfoOfChannel:(NSString *)channel_id success:(void(^)(id responseData))success failure:(void(^)(NSError *error))failure;
+
+/**
  * 创建直播活动接口 - 此接口建议只是测试使用，该接口返回需要的数据请从自己服务端获取
  *
  * @param channel_id 活动所属的频道ID，此ID从服务器获取或者找对接人员索要

@@ -14,6 +14,7 @@
 
 
 #define MZNET_SDK_Versions              @"1000000"
+#define MZNET_GetCurrentLiveOfChannel   @"/channel/getliveinfo"//获取当前是否有正在直播的活动
 #define MZNET_Create_NewLive            @"/live/create"//创建新的直播活动
 #define MZNET_GetCategoryList           @"/category/list"//获取分类列表
 #define MZNET_GetFCodeList              @"/fcode/list"//获取F码列表
@@ -71,6 +72,7 @@
 //+(void)setDebug:(BOOL)isDebug;
 //+(BOOL)isDebug;
 
++(NSString *)getCurrentLiveOfChannel;
 +(NSString *)createNewLive;
 +(NSString *)getCategoryList;
 +(NSString *)getFCodeList;
