@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.authors      = "Mengzhu"
   s.name         = "MZMediaSDK"
-  s.version      = "2.6.0"
+  s.version      = "2.6.1"
   s.summary      = "MZMediaSDK iOS SDK"
   s.description  = "Provides the user to push the stream and the playback function"
   s.homepage     = "http://www.zmengzhu.com"
@@ -14,4 +14,5 @@ Pod::Spec.new do |s|
   s.resource="MZMediaSDK/MZMediaSDK.bundle"
   s.dependency 'MZCoreSDKLibrary','>= 2.6.0'
   s.frameworks = 'CoreText'
+  s.source_files = 'MZMediaHeader/*'
   end
