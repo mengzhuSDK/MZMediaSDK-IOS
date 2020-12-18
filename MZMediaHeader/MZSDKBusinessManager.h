@@ -363,7 +363,13 @@
  */
 +(void)getRollAdvertWithTicketId:(NSString *)ticketId success:(void(^)(id responseObject))success failure:(void (^)(NSError *))failure;
 
-
+/**
+ * 更新用户头像和昵称
+ * @param unique_id 用户唯一ID
+ * @param nickname 用户昵称
+ * @param avatar 用户头像地址
+ */
++ (void)updateUserInfoWithUnique_id:(NSString *)unique_id nickname:(NSString *)nickname avatar:(NSString *)avatar success:(void(^)(id responseObject))success failure:(void (^)(NSError *error))failure;
 @end
 
 
